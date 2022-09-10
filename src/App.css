@@ -122,4 +122,7 @@ body{
     height: 110px;
     font-size: 3rem;
   }
+  .modal1{
+    top:unset;
+  }
 }
