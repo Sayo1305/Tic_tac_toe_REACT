@@ -21,17 +21,21 @@ const Grid = () => {
                   setplayer_x(!player_x);
                   visited[idx] = true;
                   setvisited(visited);
+                  check_for_winner();
             }
             else if(visited[idx] === true)
                   window.alert("Already filled");
-            else{
+            else if(winner === true){
                   window.alert("clear the board please...😔");
             }
-            check_for_winner();
       }
       const check_for_winner =  ()=>
       {
             // horizontal
+            if(winner === true)
+            {
+                  return;
+            }
             for(let i = 0 ; i<=6;i+=3)
             {
                   if(textgrid[i] === textgrid[i+1] && textgrid[i+1] === textgrid[i+2] && textgrid[i] !== ' ')
